@@ -1,0 +1,142 @@
+@font-face {
+    font-family: font1;
+    src: url(./segoeuiabcolor.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    display: flex;
+    justify-content: center; /* center only horizontally */
+}
+
+/* SCROLL CONTAINER */
+.reels {
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;     
+    overflow: auto; 
+    scroll-snap-type: y mandatory;
+}
+
+.reels::-webkit-scrollbar{
+    display: none;
+}
+/* EACH REEL */
+.reel {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #000;
+    scroll-snap-stop: always;
+}
+
+/* IMAGE */
+.reel video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* BOTTOM SECTION */
+.reel .bottom {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.bottom .user {
+    display: flex;
+    align-items: center;
+}
+
+.bottom .user img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.bottom .user .name {
+    font-family: font1;
+    font-size: 15px;
+    color: white;
+    margin-right: 10px;
+}
+
+.bottom .user button {
+    padding: 4px 10px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* caption */
+.bottom p {
+    color: white;
+    font-family: font1;
+    font-size: 14px;
+}
+
+/* RIGHT ICONS */
+.reel .right {
+    position: absolute;
+    right: 10px;       /* 👉 exact 10px gap */
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* icons */
+.reel .right i {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* numbers */
+.reel .right h6 {
+    color: white;
+    font-size: 13px;
+}
+
+/* hover effect */
+.reel .right i:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+/* follow hover */
+.bottom .user button:hover {
+    background: white;
+    color: black;
+}
