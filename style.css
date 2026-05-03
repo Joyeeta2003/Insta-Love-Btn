@@ -140,3 +140,7 @@ main {
     background: white;
     color: black;
 }
+
+.love-icon.liked {
+  color: red !important;
+}
