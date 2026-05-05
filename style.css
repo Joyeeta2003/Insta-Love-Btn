@@ -144,3 +144,7 @@ main {
 .love-icon.liked {
   color: red !important;
 }
+
+.commented{
+    color: #00bfff;
+}
